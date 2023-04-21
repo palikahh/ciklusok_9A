@@ -1,3 +1,4 @@
+
 import pandas as pd
 
 if __name__ == '__main__':
@@ -17,3 +18,8 @@ if __name__ == '__main__':
 
     atlag = sum / darabszam
     print('átlag: ' + str(atlag))
+
+    for gyemant in diamonds.iterrows():
+            carat = gyemant[1]['carat']
+            if carat > atlag:
+                print(gyemant)
